@@ -1,10 +1,18 @@
 #!/bin/bash
 
-# Set the shutdown threshold temperature for boost.
-TURBO_OFF_TEMP=60
+# Location of configuration file
+CONFIG_FILE="/etc/autoboost.cfg"
 
-# Set the threshold temperature for boost to turn on.
-TURBO_ON_TEMP=50
+# Reading config variables
+
+TURBO_OFF_TEMP=$(cat "$CONFIG_FILE" | grep OFF | cut -d'=' -f2)
+TURBO_ON_TEMP=$(cat "$CONFIG_FILE" | grep ON | cut -d'=' -f2)
+
+# Checking if config file exist
+if [ ! -f "$CONFIG_FILE" ]; then
+  echo "Config file $CONFIG_FILE not found!"
+  exit 1
+fi
 
 # File that controls Turbo Boost
 TURBO_FILE="/sys/devices/system/cpu/intel_pstate/no_turbo"
