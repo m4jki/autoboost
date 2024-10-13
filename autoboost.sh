@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Set the shutdown threshold temperature for Turbo.
+# Set the shutdown threshold temperature for boost.
 TURBO_OFF_TEMP=60
 
-# Set the threshold temperature for Turbo to turn on.
+# Set the threshold temperature for boost to turn on.
 TURBO_ON_TEMP=50
 
 # File that controls Turbo Boost
