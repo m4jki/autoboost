@@ -3,7 +3,7 @@ Description=A script to disable Intel Turbo Boost when the temperature reaches a
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/autoturbo.sh
+ExecStart=/usr/local/bin/autoboost.sh
 
 [Install]
 WantedBy=multi-user.target
