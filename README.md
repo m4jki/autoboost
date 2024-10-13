@@ -1,2 +1,4 @@
 # autoturbo
-A script to disable Intel Turbo Boost when the temperature reaches a certain value.
+
+Here's a simple script that can disable Turbo Boost on your laptop to help prevent overheating and reduce fan noise. However, it's important to note that this script might not work on all laptops, and disabling Turbo Boost can impact performance.
+
