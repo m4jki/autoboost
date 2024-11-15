@@ -30,11 +30,11 @@ while true; do
 
 # Toggle the state
 if [ "$temp" -ge "$TURBO_OFF_TEMP" ] && [ "$CURRENT_STATE" -eq "0" ]; then
-    echo 1 | sudo tee $TURBO_FILE > /dev/null
+    echo 1 | tee $TURBO_FILE > /dev/null
 fi 
 
 if [ "$temp" -le "$TURBO_ON_TEMP" ] && [ "$CURRENT_STATE" -eq "1" ]; then
-    echo 0 | sudo tee $TURBO_FILE > /dev/null
+    echo 0 | tee $TURBO_FILE > /dev/null
 fi
 
 sleep 1
